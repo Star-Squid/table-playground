@@ -100,6 +100,10 @@ body {
   align-items: center;
 }
 
+.dawn{
+  background: var(--dawn);
+}
+
 body::-webkit-scrollbar {
   width: 11px;
 }
@@ -124,7 +128,6 @@ h1 {
   height: 100%;
   display: grid;
   place-content: center;
-  background: var(--dawn);
 }
 
 /* Blue */
@@ -178,7 +181,8 @@ h1 {
   box-shadow: 0 0 20px var(--transparent);
 }
 .list-table tr {
-  margin-bottom: 1rem; 
+  /* padding-bottom: 1rem; 
+  border-bottom: thin solid var(--grey-2); */
 }
 .list-table th {
   display: none;
