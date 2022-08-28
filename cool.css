@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --regular: clamp(1rem, 2vmin, 2rem);
+
+  --plain: "Nunito Sans", sans-serif;
+  --fancy: "Libre Baskerville", serif;
+
+  --white: #ffffff;
+  --navy: #0f1c70;
+  --pink: #f64676;
+  --teal: #44d5d1;
+  --lemon: #fce431;
+
+  --grey-1: #7980af;
+  --grey-2: #9fa4c6;
+  --grey-3: #d8dbe8;
+  --grey-4: #f6f6f9;
+  --transparent: rgba(0, 0, 0, 0.15);
+
+  --scrollbarBG: #ffffff;
+  --thumbBG: #9fa4c6;
+
+  --sunset: linear-gradient(
+    90deg,
+    #ff4676,
+    #ff5967,
+    #ff6f58,
+    #ff8649,
+    #ff9e3b,
+    #ffb52f,
+    #ffcd29,
+    #ffe430
+  );
+  --lime: linear-gradient(
+    90deg,
+    #17d5d1,
+    #1fdcc2,
+    #43e2ae,
+    #67e796,
+    #8cea7c,
+    #b1ea60,
+    #d7e946,
+    #ffe430
+  );
+  --sky: linear-gradient(
+    90deg,
+    #0f1c70,
+    #00398d,
+    #0055a4,
+    #006fb6,
+    #0089c2,
+    #00a3ca,
+    #00bcce,
+    #17d5d1
+  );
+  --dawn: linear-gradient(
+    90deg,
+    #d8dbe8,
+    #e4d7f7,
+    #ffcef8,
+    #ffc3e5,
+    #ffbbc0,
+    #ffbf90,
+    #ffce5d,
+    #ffe430
+  );
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: var(--plain);
+  color: var(--navy);
+  font-size: var(--regular);
+  text-align: justify;
+  text-justify: inter-word;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  overflow-x: hidden;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+h1 {
+  font-family: var(--fancy);
+}
+
+.container-list {
+  margin-top: -15px;
+  margin-left: -15px;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  background: var(--dawn);
+}
+
+/* Blue */
+
+.blue-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px var(--transparent);
+}
+
+.blue-table thead tr {
+  background: var(--sky);
+  color: var(--white);
+  text-align: left;
+  cursor: pointer;
+}
+
+.blue-table th,
+.blue-table td {
+  padding: 1rem 2rem;
+}
+
+.blue-table tbody tr {
+  border-bottom: thin solid var(--grey-3);
+}
+
+.blue-table tbody tr:nth-of-type(even) {
+  background-color: var(--grey-4);
+}
+
+.blue-table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--teal);
+}
+
+.blue-table tbody tr:hover {
+  color: var(--teal);
+}
+
+/* List */
+
+.list-table {
+  margin: 1rem 0;
+  min-width: 300px;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 0.4em;
+  overflow: hidden;
+  box-shadow: 0 0 20px var(--transparent);
+}
+.list-table tr {
+  margin-bottom: 1rem; 
+}
+.list-table th {
+  display: none;
+}
+.list-table td {
+  display: block;
+  padding: 0.5rem;
+  border-bottom: thin solid var(--grey-2);
+
+}
+.list-table td:first-child {
+  padding-top: 0.5em;
+}
+.list-table td:last-child {
+  padding-bottom: 0.5em;
+}
+.list-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 6.5em;
+  display: inline-block;
+}
+@media (min-width: 550px) {
+  .list-table td:before {
+    display: none;
+  }
+}
+.list-table th,
+.list-table td {
+  text-align: left;
+  border: none;
+}
+@media (min-width: 550px) {
+  
+  .list-table th,
+  .list-table td {
+    display: table-cell;
+    padding: 0.25em 0.5em;
+  }
+  .list-table th:first-child,
+  .list-table td:first-child {
+    padding-left: 0;
+  }
+  .list-table th:last-child,
+  .list-table td:last-child {
+    padding-right: 0;
+  }
+}
