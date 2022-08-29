@@ -1,0 +1,109 @@
+/* @import url('https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css'); */
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  background-color: var(--navy);
+  color: var(--grey-3);
+}
+
+section {
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 2rem;
+  margin: 0;
+}
+.header {
+  background: linear-gradient(
+    0deg,
+    #0f1c70,
+    #00398d,
+    #0055a4,
+    #006fb6,
+    #0089c2,
+    #00a3ca,
+    #00bcce,
+    #17d5d1
+  );
+  width: 100%;
+  padding: 2rem;
+  margin: 0;
+}
+
+.contain-table {
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+caption {
+  text-align: left;
+  font-style: italic;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+}
+
+thead {
+  line-height: 2;
+}
+
+tbody tr:hover {
+  background: var(--grey-1);
+}
+
+th,
+td {
+  padding: 0.25em 0.5em 0.25em 1em;
+  vertical-align: text-top;
+  text-align: left;
+  text-indent: -0.5em;
+}
+
+th {
+  vertical-align: bottom;
+  background: #00a3ca;
+  color: var(--white);
+}
+
+tr:nth-child(even) th[scope="row"] {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) th[scope="row"] {
+  background-color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+td:nth-of-type(2) {
+  font-style: italic;
+}
+
+th:nth-of-type(3),
+td:nth-of-type(3) {
+  text-align: right;
+}
+
+#dark-table_length > label > select {
+  color: var(--white);
+}
+
+#dark-table_filter > label > input[type="search"] {
+  color: var(--white);
+}
+
+.dataTables_wrapper .ui-toolbar {
+  line-height: 4;
+}

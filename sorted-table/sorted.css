@@ -220,7 +220,7 @@ body {
     word-wrap: normal;
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
-    content: "arrow_back";
+    content: "arrow_forward";
     -webkit-transform: rotate(90deg);
     display: none;
     vertical-align: middle;
@@ -233,7 +233,7 @@ body {
   }
   
   div.material-table table th.sorting_desc:after {
-    content: "arrow_forward";
+    content: "arrow_back";
   }
   
   div.material-table table tbody tr:hover {
