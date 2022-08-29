@@ -10,6 +10,8 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -21,7 +23,8 @@ html {
   --white: #ffffff;
   --navy: #0f1c70;
   --pink: #f64676;
-  --teal: #44d5d1;
+  --teal: #4b849b;
+  --turquoise: #17D5D1;
   --lemon: #fce431;
 
   --grey-1: #7980af;
@@ -66,6 +69,17 @@ html {
     #00bcce,
     #17d5d1
   );
+  --sky-vertical: linear-gradient(
+    180deg,
+    #0f1c70,
+    #00398d,
+    #0055a4,
+    #006fb6,
+    #0089c2,
+    #00a3ca,
+    #00bcce,
+    #17d5d1
+  );
   --dawn: linear-gradient(
     90deg,
     #d8dbe8,
@@ -89,10 +103,9 @@ body {
   text-justify: inter-word;
   width: 100vw;
   height: 100vh;
-  background-color: var(--white);
+  background-color: var(--grey-4);
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-  overflow-x: hidden;
 
   display: flex;
   flex-flow: column nowrap;
@@ -116,13 +129,20 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid var(--scrollbarBG);
 }
 
-h1 {
+h1, h3, h4 {
   font-family: var(--fancy);
+  color: var(--navy);
+}
+h2 {
+  font-family: var(--fancy);
+  color: var(--white);
+  border-bottom: thin solid var(--white);
+  margin: 0;
 }
 
 .container-list {
-  margin-top: -15px;
-  margin-left: -15px;
+  margin-top: 0;
+  margin-left: 0;
   padding: 2rem;
   width: 100%;
   height: 100%;
@@ -158,7 +178,7 @@ h1 {
 }
 
 .blue-table tbody tr:nth-of-type(even) {
-  background-color: var(--grey-4);
+  background-color: var(--white);
 }
 
 .blue-table tbody tr:last-of-type {
@@ -180,17 +200,22 @@ h1 {
   overflow: hidden;
   box-shadow: 0 0 20px var(--transparent);
 }
-.list-table tr {
-  /* padding-bottom: 1rem; 
-  border-bottom: thin solid var(--grey-2); */
+
+.list-table tr:nth-of-type(even) {
+  background-color: var(--grey-4);  
 }
+
+.list-table tr:hover{
+  background-color: #e4d7f7;  
+}
+
 .list-table th {
   display: none;
 }
 .list-table td {
   display: block;
   padding: 0.5rem;
-  border-bottom: thin solid var(--grey-2);
+  /* border-bottom: thin solid var(--grey-2); */
 
 }
 .list-table td:first-child {
@@ -230,4 +255,10 @@ h1 {
   .list-table td:last-child {
     padding-right: 0;
   }
+}
+
+/* scrolling */
+
+.scrolling-table{
+
 }
