@@ -1,6 +1,15 @@
 $(document).ready(function () {
     $('#dark-table').DataTable({
-        colReorder: true
+        colReorder: true,
+        // 'ajax': {
+        //     'url': 'data.json',
+        //     'dataSrc': ''
+        // },
+        // 'columns': [
+        //     {'roomsData': 'id'},
+        //     {'roomsData': 'room'},
+        //     {'roomsData': 'price'}
+        // ]
     });
 });
 

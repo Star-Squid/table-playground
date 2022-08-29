@@ -26,6 +26,7 @@ table {
     width: 100%;
     margin: 0;
     border-collapse: collapse;
+    position: relative;
   }
   
   caption {
@@ -46,10 +47,16 @@ table {
     text-indent: -0.5em;
   }
   
+  /* thead {
+    position: relative;
+  } */
+
   th {
     vertical-align: bottom;
     background: var(--pink);
     color: #fff;
+    position: sticky;
+    top: 0;
   }
   
   tr:nth-child(even) th[scope=row] {
